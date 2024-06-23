@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deny</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>      
+        <div class="logo">
+
+        </div>
+        <h1 id="Welcome">What would you like to know?</h1>
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, `tab1`)">Deny</button>
+            <button class="tablink" onclick="openTab(event, `tab2`)">trunk/AP config</button>
+            <button class="tablink" onclick="openTab(event, `tab3`)">phone, pc config</button>
+            <button class="tablink" onclick="openTab(event, `tab4`)">Port security</button>
+            <button class="tablink" onclick="openTab(event, `tab5`)">trouble shooting</button>
+            <button class="tablink" onclick="openTab(event, `tab6`)">common vlans</button>
+        </div>
+    </header>
+    <!--tab 1 content-->
+    <div id="tab1" class="tabcontent">
+        <div>
+            <div id="button_container">
+                <button id="big_button">Deny everything!</button>
+            </div>
+        </div>
+        <section id="code_content">
+            <div id="newbuttons">
+                
+            </div>
+            <div id="code_container">
+                <textarea class="deniable" placeholder="Paste your content here"></textarea>
+            </div>
+        </section>
+    </div>
+    <!--tab 2 content-->
+    <div id="tab2" class="tabcontent">
+        <h3>
+            description section needs to be filled<br>
+            switchport access vlan x<br>
+            switchport trunk allowed vlan X,X,X,XX,X,XXX,XX,X-XX<br>
+            switchport trunk allowed vlan add XXX<br>
+            switchport trunk native vlan XX<br>
+            switchport mode trunk<br>
+            ip access-group Block_Traffic in<br>
+            spanning-tree portfast edge trunk<br>
+        </h3>
+    </div>
+    <!--tab 3 content-->
+    <div id="tab3" class="tabcontent">
+        <h3>
+            description Needs to be filled<br>
+            switchport access vlan xx<br>
+            switchport mode access<br>
+            switchport voice vlan x<br>
+            switchport port-security maximum 2<br>
+            switchport port-security<br>
+            switchport port-security violation protect<br>
+            switchport port-security mac-address sticky<br>
+            spanning-tree portfast <br>     
+        </h3>
+    </div>
+    <!--tab 4 content-->
+    <div id="tab4" class="tabcontent">
+        <h3>
+            switchport mode access<br>
+            switchport port-security maximum 2<br>
+            switchport port-security violation restrict<br>
+            switchport port-security mac-address sticky<br>
+            switchport port-security<br>
+            spanning-tree portfast edge<br>
+        </h3>
+    </div>
+    <!--tab 5 content-->
+    <div id="tab5" class="tabcontent">
+        <h3>
+            show int status<br>
+            show run<br>
+            Show port-security<br>
+            Show ip int brief<br>
+            shut<br>
+            no shut<br>
+        </h3>
+    </div>
+    <div id="tab6" class="tabcontent">
+        <h3>
+            description Needs to be filled<br>
+            switchport access "after the desired vlan"<br>
+            <br>
+            <br>
+            vlan X = phone<br>
+            vlan xx = domain pcs<br>
+            vlan XXX = Micros stations<br>
+            vlan XXX = guest vlan<br>
+        </h3>
+    </div>
+    <section class="needed">
+        <h1>wr</h1>
+        <h2>needs to be done at the end!!</h2>
+    </section>
+    <footer id="end">
+        I would like to dedicate this project to my colleague, Mahir
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

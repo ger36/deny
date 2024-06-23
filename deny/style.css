@@ -1,0 +1,125 @@
+* {
+    background-color: rgba(195,235,235,255);
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    height: 10vh;
+    width: 10vh;
+    background-image: url(GPLog.jpg);
+    background-size: contain;
+    position: absolute;
+    top: 0.7em;
+    left: 6em;
+}
+#Welcome {
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+.tablink {
+    font-size: 1.5em;
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: rgba(245,245,220,255);
+}
+h3 {
+    margin-left: 5em;
+}
+#button_container{
+    display: flex;
+    justify-content: center;
+}
+#big_button {
+    padding: 3rem;
+    border-radius: 25px;
+    font-size: 3rem;
+    border: 4px solid;
+    margin: 5rem 0 5rem 0;
+    background-color: #db7979;
+    transition: transform .2s ease;
+}
+#big_button.deny {
+    background-color: #db7979;
+}
+#big_button.undeny {
+    background-color: #79db90;
+}
+#newbuttons {
+    font-size: 1.5rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column; /* Change the direction to column */
+    align-items: flex-start;
+}
+.dynamic-button {
+    transition: transform .2s ease;
+}
+.dynamic-button.undeny {
+    background-color: #79db90;
+    transition: transform .2s ease;
+}
+.dynamic-button:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+.dynamic-button.undeny:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+} 
+#big_button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#code_content {
+    display: flex;
+    gap: 1rem;
+}
+.deniable {
+    min-width: 60rem;
+    overflow-y: visible;
+    overflow-x: hidden;
+    margin-left: 2rem;
+    resize: vertical;
+    font-size: 1.5rem;
+}
+.dynamic-button {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0.15rem;
+    align-content: center;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #db7979;
+}
+.tabcontent {
+    display: none;
+}
+.tabcontent.active {
+    display: block;
+}
+.needed {
+    margin-top: auto;
+    text-align: center;
+    padding: 1em;
+}
+#end {
+    text-align: center;
+    margin-bottom: 2em;
+}
